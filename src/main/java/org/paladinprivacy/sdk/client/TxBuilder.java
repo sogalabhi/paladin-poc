@@ -17,6 +17,7 @@ public class TxBuilder {
     private final PaladinClient client;
     private String type;
     private String domain;
+    private String function;
     private String from;
     private String to;
     private Object inputs;
@@ -28,6 +29,7 @@ public class TxBuilder {
 
     public TxBuilder privateTx() { this.type = "private"; return this; }
     public TxBuilder domain(String domain) { this.domain = domain; return this; }
+    public TxBuilder function(String function) { this.function = function; return this; }
     public TxBuilder from(String from) { this.from = from; return this; }
     public TxBuilder to(String to) { this.to = to; return this; }
     public TxBuilder inputs(Object inputs) { this.inputs = inputs; return this; }
@@ -37,6 +39,7 @@ public class TxBuilder {
         Map<String, Object> payload = new HashMap<>();
         payload.put("type", type);
         payload.put("domain", domain);
+        if (function != null) payload.put("function", function);
         payload.put("from", from);
         payload.put("to", to);
         payload.put("data", inputs);

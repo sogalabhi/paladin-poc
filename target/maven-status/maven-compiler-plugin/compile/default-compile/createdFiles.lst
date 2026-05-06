@@ -1,3 +1,4 @@
 org/paladinprivacy/sdk/client/PaladinClient.class
-org/paladinprivacy/sdk/client/TxBuilder.class
 org/paladinprivacy/sdk/exception/PaladinRpcException.class
+org/paladinprivacy/sdk/client/TxBuilder.class
+org/paladinprivacy/sdk/domain/ZetoHelper.class
