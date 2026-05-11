@@ -92,20 +92,20 @@ flowchart TB
     end
 
     subgraph SDK [Paladin Java SDK]
-        B1[PaladinClient]
-        B2[TxBuilder<br/>(fluent + idempotency)]
-        B3[Domain Helpers<br/>Zeto / Noto / Pente]
-        B4[Dual WebSocket Clients<br/>PTX + pgroup subscriptions]
-        B5[Query Builder for pstate]
+        B1["PaladinClient"]
+        B2["TxBuilder<br/>(fluent + idempotency)"]
+        B3["Domain Helpers<br/>Zeto / Noto / Pente"]
+        B4["Dual WebSocket Clients<br/>PTX + pgroup subscriptions"]
+        B5["Query Builder for pstate"]
     end
 
     subgraph RPC [RPC Transport]
-        C1[HTTP JSON-RPC<br/>java.net.http.HttpClient]
-        C2[WebSocket<br/>Jakarta / Tyrus]
+        C1["HTTP JSON-RPC<br/>java.net.http.HttpClient"]
+        C2["WebSocket<br/>Jakarta / Tyrus"]
     end
 
     subgraph Node [Paladin Node]
-        D1[ptx_* / keymgr_* / pstate_* / pgroup_*]
+        D1["ptx_* / keymgr_* / pstate_* / pgroup_*"]
     end
 
     App --> SDK
